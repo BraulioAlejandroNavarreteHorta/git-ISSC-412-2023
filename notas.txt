@@ -1,33 +1,55 @@
 Comandos:
+
 - git clone
-Crea una copia local del repositorio
-Ej. git clone https://github.com/BraulioAlejandroNavarreteHorta/git-ISSC
+Crea una copia local del repositorio. 
+Ejemplo: gir clone <repo_url>
 
 - git status
-Nos devuelve el estado actual del repositorio
-Ej. git status
+Nos devuelve el estado actual del repo.
+Ej: git status 
 
 - git add
-Preparar cambios (linea por linea) para ser incluidos en un commit
-Ej 1. git add notas-txt (agrega solo 1 archivo)
-Ej 2. git add . (agrega todos los archivos)
+Prepara cambios (liena por linea) para ser incluidos en un commit.
+Ej 1: git add notas.txt (agrega solo 1 archivo)
+Ej 2: git add . (agrega todos los archivos)
 
-- git commit
+- git commit 
 Crea un nuevo commit con los cambios que preparamos con el comando git add.
 Tiene un ID de commit y un mensaje.
-Ej. git commit -m "<mensaje commit>"
+Ej: git commit -m "<mensaje commit>"
 
--git push
-Sincroniza la rama remota con lo que hat en la local.
-En otras palabras, sube los commits que hay en la local y faltan en la remota.
-Ej. git push
+- git push 
+Sincroniza la rama remota con lo que hay en la local.
+En otras palabras sube los commits que hay en la local y faltan en la remota.
+Ej: git push 
 
 - git fetch
-Trae todos lo metadatos sobre commits, ramas, refs, etc. de un repositorio remoto.
-No descarga cambios a la rama local, solo trae los metadatos
-Ej. git fetch
+Trae los metadatos sobre commits, ramas, refs, etc.
+de un repositorio remoto.
+No descarga cambios a la rama local, solo trae los metadatos.
+Ej: git fetch
 
 - git pull
 Sincroniza la rama local con lo que hay en la remota.
-En otras palabras, descarga los commits que hay en la remota y faltan en la local.
-Ej. git pull
+En otras palabras, descarga los commits que hay em la remota y falta en la local.
+Ej: git pull 
+
+Ramas:
+Las ramas nos permiten trabajar con el repositorio sin alterar la estabilidad dde la rama princial como cualquier otra rama hay una
+local y una remota. Las ramas parten de un commit de origen.
+
+Integracion de ramas: 
+Para este fin, se utiliza la operacion "merge".
+Un merge combina los commits de una rama hacia a otra en un solo commit
+conocido como un "merge commit".
+
+Resolucion de conflictos. 
+Estrategias:
+1. Merge Commit (Crea un merge commit con cambios aplicados en el orden que el desarrolador elija.)
+2. Rebase (cambia el punto de origen de una rama, resolviendo conflictos durante la operacion.
+Requiere un "Force push" para sobreescribir la rama remota.)
+
+Pull request:
+Solicitra la aprobacion de los cambios en una rama 
+a otro colaborador, previo a la integracion de las 2
+ramas (merge)
